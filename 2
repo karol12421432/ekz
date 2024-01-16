@@ -1,0 +1,33 @@
+class One {
+    void test() {
+        System.out.println("Test method in class One");
+    }
+}
+
+class Two extends One {
+    void test() {
+        super.test(); // Виклик методу батьківського класу
+        System.out.println("Test method in class Two");
+    }
+}
+
+class Three extends Two {
+    void test() {
+        super.test(); // Виклик методу батьківського класу
+        System.out.println("Test method in class Three");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Створення об'єктів класів
+        One one = new One();
+        Two two = new Two();
+        Three three = new Three();
+
+        // Виклики перевантажених методів
+        one.test();   // Виклик методу класу One
+        two.test();   // Виклик перевантаженого методу класу Two
+        three.test(); // Виклик перевантаженого методу класу Three
+    }
+}
