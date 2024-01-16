@@ -1,0 +1,33 @@
+public class SumCalculator {
+
+    // Метод, який приймає три параметри та визначає їх суму
+    void calculateSum(int a, int b, int c) {
+        int sum = a + b + c;
+        System.out.println("Sum (int, int, int): " + sum);
+    }
+
+    // Перевизначення методу зміною кількості параметрів
+    void calculateSum(int a, int b) {
+        int sum = a + b;
+        System.out.println("Sum (int, int): " + sum);
+    }
+
+    // Перевизначення методу зміною типу даних
+    void calculateSum(double a, double b, double c) {
+        double sum = a + b + c;
+        System.out.println("Sum (double, double, double): " + sum);
+    }
+
+    public static void main(String[] args) {
+        SumCalculator calculator = new SumCalculator();
+
+        // Виклик методу з трьома параметрами
+        calculator.calculateSum(1, 2, 3);
+
+        // Виклик перевизначеного методу з двома параметрами
+        calculator.calculateSum(4, 5);
+
+        // Виклик перевизначеного методу зміною типу даних
+        calculator.calculateSum(1.5, 2.5, 3.5);
+    }
+}
